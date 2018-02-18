@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 import scipy.integrate as integrate
 import matplotlib.animation as animation
 
-plt.rcParams['animation.ffmpeg_path'] = r'/Volumes/Data/Youtube/[ffmpeg]/ffmpeg'
+plt.rcParams['animation.ffmpeg_path'] = 'e:/uz/ffmpeg/bin/ffmpeg.exe'
+movie_file = 'e:/temp/02-canon_poly.mp4'
 
 FIGSIZE = (16,9)
 DPI = 120  # 240 For 4K, 120 for 1080p, 80 for 720p
@@ -85,5 +86,5 @@ ani = animation.FuncAnimation(fig, animate, np.arange(1, len(res_list[0][:,0])),
                               interval=33, blit=True, init_func=init)
 writer = animation.FFMpegWriter(fps=30, bitrate=5000)
 
-ani.save('02-canon_poly.mp4', writer = writer)
+ani.save( movie_file, writer = writer)
 plt.show()
