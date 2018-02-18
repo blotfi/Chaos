@@ -15,3 +15,20 @@ plt.rcParams['animation.ffmpeg_path'] = r'/Volumes/Data/Youtube/[ffmpeg]/ffmpeg'
 Bonne chance :-)
 
 David
+
+------------------------------------
+Merci David pour les .py
+je sais que tu as dit que tu n’assurais pas le SAV
+Je propose juste une adaptation pour ceux qui ont un PC/Windows
+Donc, qqes modifs utiles pour le lecteur qui veut essayer tes fichiers
+il faut modifier le chemin où est installé ffmpegexe et indiquer aussi celui de la sauvegarde
+
+plt.rcParams[‘animation.ffmpeg_path’] = ‘e:/uz/ffmpeg/bin/ffmpeg.exe’
+
+movie_file = ‘e:/temp/02-canon_poly.mp4’
+
+ani.save( movie_file, writer = writer)
+
+Bonne adaptation
+
+Lotfi
